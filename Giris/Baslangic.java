@@ -6,33 +6,47 @@ import java.util.Scanner;
 
 public class Baslangic {
     public static void main(String[] args) {
-        int km,y;
-      int yolculukTipi;
+        int dg;
         Scanner girdi=new Scanner(System.in);
-        System.out.println("Mesafeyi giriniz");
-        km=girdi.nextInt();
-        System.out.println("Yaşınızı giriniz");
-        y=girdi.nextInt();
-        System.out.println("yolculuk tipini giriniz 1/2");
-        yolculukTipi=girdi.nextInt();
-        //Geçerli veri kontrolü
-        if (km <= 0 || y <= 0 ) {
-            System.out.println("Hatalı Veri Girdiniz!");
-            return;
+        System.out.println("Doğrum yılınızı giriniz");
+        dg=girdi.nextInt();
+        switch (dg){
+            case 0:
+                    System.out.println("Çin Zodyağınız Maymundur");
+                    break;
+            case 1:
+                System.out.println("Çin Zodyağınız Horozdur");
+                break;
+            case 2:
+                System.out.println("Çin Zodyağınız Köpektir");
+                break;
+            case 3:
+                System.out.println("Çin Zodyağınız Köpektir");
+                break;
+            case 4:
+                System.out.println("Çin Zodyağınız Faredir");
+                break;
+            case 5:
+                System.out.println("Çin Zodyağınız Öküzdür");
+                break;
+            case 6:
+                System.out.println("Çin Zodyağınız Kaplandır");
+                break;
+            case 7:
+                System.out.println("Çin Zodyağınız Tavşandır");
+                break;
+            case 8:
+                System.out.println("Çin Zodyağınız Ejderhadır");
+                break;
+            case 9:
+                System.out.println("Çin Zodyağınız Yılandır");
+                break;
+            case 10:
+                System.out.println("Çin Zodyağınız Atdır");
+                break;
+            case 11:
+                System.out.println("Çin Zodyağınız Koyundur");
+                break;
         }
-        double ucret = km * 0.10;
-        if (y < 12) {
-            ucret *= 0.5; // 50% indirim
-        } else if (y >= 12 && y <= 24) {
-            ucret *= 0.9; // 10% indirim
-        } else if (y >= 65) {
-            ucret *= 0.7; // 30% indirim
-        }
-        if (yolculukTipi==2) {
-            ucret *= 0.8; // 20% indirim
-        }
-
-        System.out.println("Toplam Bilet Fiyatı: " + ucret + " TL");
-
     }
 }
